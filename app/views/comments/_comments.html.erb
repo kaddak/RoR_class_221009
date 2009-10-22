@@ -1,0 +1,10 @@
+<p> <%# this is a partial ( _******) -starts with an underscore %>
+  <%= link_to 'New Comment', new_post_comment_path(@post) %>
+</p>
+
+<% for comment in @comments do %>                     <%# sama kuin: @posts.each do |post| %>
+  <strong>Commenter:</strong>
+  <%= comment.commenter %>
+  <%= simple_format comment.body %>
+  <hr />
+<% end %>

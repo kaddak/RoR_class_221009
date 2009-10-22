@@ -1,0 +1,7 @@
+<h1>Editing post</h1>
+
+<%= render :partial => "form", :locals => { :button_text => "Update",
+                                    :explanations => "Edit an existing post"}%>
+
+<%= link_to 'Show', @post %> |
+<%= link_to 'Back', posts_path %>

@@ -1,0 +1,9 @@
+<% title "the Blog nr #1" %>
+
+<%= link_to 'New post', new_post_path if logged_in? %>
+
+<% for post in @posts do %>                     <%# sama kuin: @posts.each do |post| %>
+  <h2><%= link_to(post.title, post) %></h2>
+  <p>Created <%= time_ago_in_words(post.created_at)%> ago</p>
+  <%= simple_format(post.body) %>
+<% end %>

@@ -1,0 +1,10 @@
+<% title "Comment for '#{@post.title}'" %>
+
+<p>
+  <strong>Commenter: </strong>
+  <%=h @comment.commenter %>
+</p>
+
+<%= simple_format(@comment.body) %>
+
+<%= link_to "Back to post", @post %>

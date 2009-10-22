@@ -1,0 +1,20 @@
+
+<h1>  <%=h @post.title %></h1>
+
+<p>Created <%= time_ago_in_words(@post.created_at)%> ago</p>
+
+<%= simple_format(@post.body) %>
+
+<% if logged_in? %>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Destroy', @post, :method => :delete, :confirm => "Are you sure?" %> |
+<%= link_to 'Back', posts_path %>
+<% end %>
+
+<h2>Comments</h2>
+
+<p>
+<%= link_to "Comments (#{@post.comments.count}) in a separate page", post_comments_path(@post) %>
+</p>
+
+<%= render :partial => "comments/comments" %>
