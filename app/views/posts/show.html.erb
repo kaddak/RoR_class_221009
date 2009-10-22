@@ -3,7 +3,7 @@
 
 <p>Created <%= time_ago_in_words(@post.created_at)%> ago</p>
 
-<%= simple_format(@post.body) %>
+<%= textilize(@post.body) %>
 
 <% if logged_in? %>
 <%= link_to 'Edit', edit_post_path(@post) %> |
