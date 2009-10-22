@@ -1,6 +1,6 @@
 Just some text for testing
 
-
+another test...
 
 == Welcome to Rails
 
