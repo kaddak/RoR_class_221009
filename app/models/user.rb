@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :posts
+
   attr_accessor :password_confirmation
   attr_reader :password
   #nämä ei tallennu kantaan (ei ole niille sarakkeita)
